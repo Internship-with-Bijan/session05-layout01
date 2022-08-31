@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "chiz chiz"
+        "nav  content"
+        "nav  footer";
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: auto 5fr auto;
+
+    min-height: 100vh;
+}
+
+body header {
+    grid-area: chiz;
+
+    background-color: hsl(345deg 70% 50%);
+}
+
+body nav {
+    grid-area: nav;
+
+    background-color: hsl(70deg 80% 60%);
+}
+
+body main {
+    grid-area: content;
+
+    background-color: hsl(30deg 70% 60%);
+}
+
+body footer {
+    grid-area: footer;
+
+    background-color: hsl(160deg 60% 50%);
+}
